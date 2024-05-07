@@ -79,21 +79,46 @@ header {
 
 /* Button styling in the navigation bar */
 .btn {
-    font-family: 'Montserrat', sans-serif;
-    background: none;
-    border: 2px solid #D3D3D3;
-    color: #D3D3D3;
-    padding: 10px 20px;
-    text-transform: uppercase;
-    border-radius: 30px;
-    transition: all 0.3s ease;
+    animation: fade-in-button 1s ease 0s 1 normal none running;
+    padding: 8px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Supreme', sans-serif; /* Ensure the 'Supreme' font is properly loaded */
+    font-size: 16px;
+    line-height: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 32px;
     cursor: pointer;
+    font-weight: 500;
+    transition: none 0s ease 0s;
+    position: relative;
+    min-width: fit-content;
+    margin: 0px;
+    text-decoration: none; /* Removes underline from links styled as buttons */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Hover effect for buttons */
-.btn:hover {
-    color: rgb(54, 54, 54);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
+
+button span {
+    color: rgb(255, 255, 255);
+    z-index: 3;
+    font-weight: 400;
+    margin: 0px;
+    padding: 0px;
+}
+
+@keyframes fade-in-button {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Main content styling */
@@ -206,11 +231,7 @@ button a, .btn a {
     from { opacity: 1; }
     to { opacity: 0; }
 }
-
-.body.page-exit {
-    animation: fadeOut 0.5s ease forwards;
-}
-
+    
 @keyframes fadeInScaleUp {
     from {
         opacity: 0;
@@ -221,8 +242,3 @@ button a, .btn a {
         transform: scale(1);
     }
 }
-
-body * {
-    animation: fadeInScaleUp 1s ease-out;
-}
-
