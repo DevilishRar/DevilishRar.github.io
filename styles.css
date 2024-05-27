@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
+/* Root styling to ensure full height and specific styling across all elements */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #000000, #333333);
+    color: #e0e0e0;
+    font-family: 'Roboto Mono', monospace;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* Header styling */
+header {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: transparent;
+    position: relative;
+    z-index: 10;
+}
+
+/* Navigation bar layout */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 3rem;
+}
+
+/* Logo styling in the navbar */
+.navbar .logo a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(211,211,211,1) 50%, rgba(255,255,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 3s ease-in-out infinite;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Main content styling */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding: 20px;
+}
+
+/* Container for the guide content */
+.container {
+    width: 80%;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    animation: fadeIn 1s ease-out;
+}
+
+h1, h2, h3 {
+    color: #fff;
+}
+
+p, ul {
+    color: #ccc;
+    text-align: left;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+/* Styling for rules sections */
+.rules-section {
+    margin-bottom: 20px;
+}
+
+/* Highlight for the most important section */
+.most-important {
+    background: rgba(255, 0, 0, 0.2);
+    border-left: 4px solid red;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes gradient-shift {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Button hover effect */
+.btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 1);
+}
+
+.btn:active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Additional styling for consistent look */
+footer {
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    background: transparent;
+    color: #D3D3D3;
+}
+
+/* Add this at the end of your styles.css */
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
